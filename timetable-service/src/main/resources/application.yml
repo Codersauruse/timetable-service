@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: timetable-service
+  profiles:
+    active: default
+  config:
+    import: "configserver:http://localhost:8071"
+  cloud:
+    config:
+      uri: http://localhost:8071
