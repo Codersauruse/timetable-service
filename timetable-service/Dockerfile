@@ -19,7 +19,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the jar file from the build stage
-COPY --from=build /app/target/*.war /app/app.jar
+COPY --from=build /app/target/*.jar /app/app.jar
 
 # Expose the port Spring Boot is running on
 EXPOSE 8080
