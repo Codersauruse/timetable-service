@@ -47,5 +47,10 @@ public class BusServiceIMPL implements BusService {
         return newBus;
     }
 
+    @Override
+    public boolean validateBusById(String id) {
+        return busRepo.existsById(id);
+    }
+
 
 }

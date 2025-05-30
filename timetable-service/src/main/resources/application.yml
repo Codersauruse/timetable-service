@@ -3,8 +3,14 @@ spring:
     name: timetable-service
   profiles:
     active: default
-  config:
-    import: "configserver:http://localhost:8071"
-  cloud:
-    config:
-      uri: http://localhost:8071
+#  config:
+#    import: "configserver:http://localhost:8071"
+#  cloud:
+#    config:
+#      uri: http://localhost:8071
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

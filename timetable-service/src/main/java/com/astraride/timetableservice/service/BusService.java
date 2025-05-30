@@ -12,4 +12,6 @@ public interface BusService {
 
 
     Bus saveBus(BusDto bus);
+
+    boolean validateBusById(String id);
 }

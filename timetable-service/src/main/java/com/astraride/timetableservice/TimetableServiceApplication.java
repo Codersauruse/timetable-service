@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @SpringBootApplication
 @EnableMongoRepositories(basePackageClasses = BusRepo.class)
-@EnableConfigurationProperties(MongoProperties.class)
+//@EnableConfigurationProperties(MongoProperties.class)
 public class TimetableServiceApplication {
 
 	public static void main(String[] args) {

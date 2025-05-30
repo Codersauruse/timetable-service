@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/bus")
+@RequestMapping("/api/bus")
 public class timeTableController {
 
     @Autowired
@@ -37,6 +37,11 @@ public class timeTableController {
         return ResponseEntity.status(HttpStatus.OK).body(response);  // Use HttpStatus.OK (200)
     }
 
+    @GetMapping("/validateBusId/{id}")
+    public ResponseEntity<Boolean> validateBusById(@PathVariable  String id) {
+        boolean result = busService.validateBusById(id);
+        return ResponseEntity.status(HttpStatus.OK).body(result);  // Use HttpStatus.OK (200)
+    }
     @PostMapping("/saveBus")
 
     public ResponseEntity<StandardResponse> saveBus(@RequestBody  BusDto bus) {
